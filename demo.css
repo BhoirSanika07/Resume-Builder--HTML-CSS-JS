@@ -1,0 +1,14 @@
+/* #cv_form{
+    display: none;
+} */
+/* #cv_template{
+    display: none;
+} */
+.image{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100px;
+}
+.background{
+    background-color: rgb(62, 188, 234);
+}

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+    <link rel="stylesheet" href="demo.css">
+    <title>resume builder</title>
+  </head>
+  <body>
+<div class="container" id="cv_form">
+  <h1 class="text-center my-2">Resume builder </h1>
+<p class ="text-center my-2">
+    by learn with sanika</p>
+    <div class="row">
+      <div class="col-md-6">
+       <h3>Personal information</h3>
+       <div class="form-group">
+        <label for="nameField"> Your Name</label>
+        <br> 
+        <input type="text"  id="nameField"  placeholder=" enter here" class="form_control  my-2">
+      </div>
+      <div class="form-group">
+        <label for="number"> Your Contact</label>
+        <br>
+        <input type="numvber"  id="numberField"  placeholder=" enter here" class="form_control  my-2">
+      </div>
+       <div class="form-group">
+        
+        <label for="address"> Your  Address</label>
+        <br>
+       <textarea id="addressField"  placeholder=" enter here" class="form_control  my-2"></textarea>
+       </div>
+        
+        <p class="text-secondary my-2">Important link</p>
+        <div class="form-group">
+        
+          <label for="Instagram"> instagram </label>
+          <br>
+         <textarea id="InstagramField"  placeholder=" enter here" class="form_control  my-2"></textarea>
+         </div>
+         <div class="form-group">
+        
+          <label for="Twitter"> Twitter</label>
+          <br>
+         <textarea id="TwitterField"  placeholder=" enter here" class="form_control  my-2"></textarea>
+         </div>
+         <div class="form-group">
+        
+          <label for="Linkedin"> Linkedin</label>
+          <br>
+         <textarea id="LinkedinField"  placeholder=" enter here" class="form_control  my-2"></textarea>
+         </div>
+
+      
+<!-- 1st col -->
+      </div>
+      <div class="col-md-6">
+        <h3>Professional information</h3>
+        <div class="form-group ">
+        
+          <label for="objective"> objective</label>
+          <br>
+         <textarea id="objective"  placeholder=" enter here" class="form_control  my-2"></textarea>
+         </div>
+         
+         <div class="form-group" id="we">
+        
+          <label for="work"> work experience</label>
+          <br>
+         <textarea id="work"  placeholder=" enter here" class="form_control  wefield  mt-2"></textarea>
+         <br>
+        
+         <div class="text-center mt-2" id="weaddbutton">
+          <br>
+          <button onclick="addNewWwField()" class="btn btn-primary btn-lg">
+            add
+          </button>
+         </div>
+        </div>
+         <div class="form-group " id="WE">
+        
+          <label for="academic"> Academic Qualification</label>
+          <br>
+         <textarea id="academic"  placeholder=" enter here" class="form_control wefield mt-2"></textarea>
+         <br>
+        
+         <div class="  text-center mt-2" id="Weaddbutton">
+          <button  onclick="AddNewWwField()" class="btn btn-primary btn-lg">
+            add
+          </button>
+         </div>
+        </div>
+       
+        <!-- 2nd col -->
+      </div> 
+    </div>
+    <div class="container text-center mt-3">
+      <!-- button.btn.btn-primary.btn-lg -->
+      <button onclick="GenerateCv()" class="btn btn-primary btn-lg"> Generate CV</button>
+    </div>
+</div>
+<!-- end of basic resume -->
+
+
+<!-- CV TEMPLATE -->
+<div class="container" id="cv_template">
+  <h1>
+ <div class="row">
+  <!-- for 1st columns -->
+  <div class="col-md-4 text-center  my-1 background">
+  <!-- insert profile image -->
+  <img src="https://www.asiamediajournal.com/wp-content/uploads/2022/11/Default-PFP.jpg"  alt="error" class="image">
+  
+  <!-- make container for personal information -->
+  <div class="container ">
+    <h5 id="nameT1">Bhoir sanika</h5>
+    <h5 id="contactT">+91 9876543210</h5>
+  <h5 id="addressT"> Maharashtra-India</h5>
+  <!-- makes line -->
+  <hr>
+  <!-- for links use anchor tabs -->
+  <p  id="instaT"> <h5> <a href="#1">https://www.instagram.com</a></h5></p>
+
+  <p  id="twitterT"> <h5> <a href="#1">https://www.twitter.com</a></h5></p>
+  
+  <p  id="linkedinT"> <h5> <a href="#1">https://www.linkedin.com</a></h5></p>
+  </div>
+  </div>
+  <div class="col-md-8 py=3">
+   <h1  id="nameT2" class="text-center " style="font-weight: 800;" >Bhoir Sanika</h1>
+
+   <!-- objective cards -->
+  <div class="card mt-3">
+    <div class="card-header background">
+     <h4 style="font-weight: 500;"> Objective</h4>
+    </div>
+    <div id="objectiveT" class="card-body">
+      <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Magni architecto maiores iusto repudiandae consequuntur 
+        porro consequatur unde tenetur,
+        dignissimos iste vitae quis quia provident
+         quisquam quo nisi asperiores quibusdam odio!</h5>
+    </div>
+  </div>
+
+  <!-- Work Experience -->
+  <div class="card mt-3">
+    <div class="card-header background">
+     <h4 style="font-weight: 500;"> Work Experience</h4>
+    </div>
+    <div class="card-body">
+      <h5>
+        <ul id="workT">
+          <li>Kim namjoon</li>
+      <li>kim Seokjin </li>
+      <li> min yoongi</li>
+      <li> jung hoseok</li>
+        </ul>
+      </h5>
+    </div>
+  </div>
+
+  <!-- Academic Qualification -->
+  <div class="card mt-3">
+    <div class="card-header background">
+     <h4 style="font-weight: 500;">Academic Qualification</h4>
+    </div>
+    <div class="card-body">
+      <h5><li>Park jimni</li>
+      <li>Kim Taehyung</li>
+      <li> Jeon Jungkook</li></h5>
+    </div>
+  </div>
+
+     <!-- print button for cv as print cv -->
+     <div class="container text-center mt-3">
+     <button onclick="PrintCv()" class="btn background">
+      Print
+     </button>
+     </div>
+  </div>
+ </div>
+  </h1>
+
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    -->
+    <script src="demo.js"></script>
+  </body>
+</html>
